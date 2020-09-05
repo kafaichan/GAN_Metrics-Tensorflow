@@ -285,7 +285,7 @@ def kernel_classifier_distance_and_std_from_activations(real_activations,
                 (math_ops.reduce_sum(k_rr) - math_ops.trace(k_rr)) / (m * (m - 1)) +
                 (math_ops.reduce_sum(k_gg) - math_ops.trace(k_gg)) / (n * (n - 1)))
 
-    ests = functional_ops.map_fn(
+    ests = tf.map_fn(
         compute_kid_block, math_ops.range(n_blocks), dtype=dtype, back_prop=False)
 
     mn = math_ops.reduce_mean(ests)
@@ -305,7 +305,7 @@ def inception_activations(images, num_splits=1):
     size = 299
     images = tf.image.resize_bilinear(images, [size, size])
     generated_images_list = array_ops.split(images, num_or_size_splits=num_splits)
-    activations = functional_ops.map_fn(
+    activations = tf.map_fn(
         fn=functools.partial(tfgan.eval.run_inception, output_tensor='pool_3:0'),
         elems=array_ops.stack(generated_images_list),
         parallel_iterations=1,

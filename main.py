@@ -48,11 +48,11 @@ def frechet_inception_distance() :
     print("FID : ", FID / 100)
 
 def kernel_inception_distance() :
-    filenames = glob(os.path.join('./real_target', '*.*'))
+    filenames = sorted(glob(os.path.join('./real_target', '*.*')))
     real_images = [get_images(filename) for filename in filenames]
     real_images = np.transpose(real_images, axes=[0, 3, 1, 2])
 
-    filenames = glob(os.path.join('./fake', '*.*'))
+    filenames = sorted(glob(os.path.join('./fake', '*.*')))
     fake_images = [get_images(filename) for filename in filenames]
     fake_images = np.transpose(fake_images, axes=[0, 3, 1, 2])
 
@@ -125,7 +125,7 @@ def mean_kernel_inception_distance() :
     print("mean_KID_mean : ", mean_KID_mean * 100)
     print("mean_KID_stddev : ", mean_KID_stddev * 100)
 
-inception_score()
-frechet_inception_distance()
+# inception_score()
+# frechet_inception_distance()
 kernel_inception_distance()
 # mean_kernel_inception_distance()
