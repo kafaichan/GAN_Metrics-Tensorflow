@@ -1,0 +1,44 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+_libgcc_mutex=0.1=main
+absl-py=0.10.0=pypi_0
+astor=0.8.1=pypi_0
+ca-certificates=2020.7.22=0
+certifi=2020.6.20=py37_0
+gast=0.4.0=pypi_0
+google-pasta=0.2.0=pypi_0
+grpcio=1.31.0=pypi_0
+h5py=2.10.0=pypi_0
+importlib-metadata=1.7.0=pypi_0
+keras-applications=1.0.8=pypi_0
+keras-preprocessing=1.1.2=pypi_0
+ld_impl_linux-64=2.33.1=h53a641e_7
+libedit=3.1.20191231=h14c3975_1
+libffi=3.3=he6710b0_2
+libgcc-ng=9.1.0=hdf63c60_0
+libstdcxx-ng=9.1.0=hdf63c60_0
+markdown=3.2.2=pypi_0
+ncurses=6.2=he6710b0_1
+numpy=1.19.1=pypi_0
+openssl=1.1.1g=h7b6447c_0
+pillow=7.2.0=pypi_0
+pip=20.2.2=py37_0
+protobuf=3.13.0=pypi_0
+python=3.7.9=h7579374_0
+readline=8.0=h7b6447c_0
+scipy=1.2.1=pypi_0
+setuptools=49.6.0=py37_0
+six=1.15.0=pypi_0
+sqlite=3.33.0=h62c20be_0
+tensorboard=1.14.0=pypi_0
+tensorflow-estimator=1.14.0=pypi_0
+tensorflow-gpu=1.14.0=pypi_0
+termcolor=1.1.0=pypi_0
+tk=8.6.10=hbc83047_0
+werkzeug=1.0.1=pypi_0
+wheel=0.35.1=py_0
+wrapt=1.12.1=pypi_0
+xz=5.2.5=h7b6447c_0
+zipp=3.1.0=pypi_0
+zlib=1.2.11=h7b6447c_3
