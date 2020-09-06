@@ -78,15 +78,15 @@ def mean_kernel_inception_distance() :
     source_alpha = 0.98
     target_alpha = 1 - source_alpha
     
-    filenames = glob(os.path.join('./real_source', '*.*'))
+    filenames = sorted(glob(os.path.join('./real_source', '*.*')))
     real_source_images = [get_images(filename) for filename in filenames]
     real_source_images = np.transpose(real_source_images, axes=[0, 3, 1, 2])
 
-    filenames = glob(os.path.join('./real_target', '*.*'))
+    filenames = sorted(glob(os.path.join('./real_target', '*.*')))
     real_target_images = [get_images(filename) for filename in filenames]
     real_target_images = np.transpose(real_target_images, axes=[0, 3, 1, 2])
 
-    filenames = glob(os.path.join('./fake', '*.*'))
+    filenames = sorted(glob(os.path.join('./fake', '*.*')))
     fake_images = [get_images(filename) for filename in filenames]
     fake_images = np.transpose(fake_images, axes=[0, 3, 1, 2])
 
@@ -127,5 +127,5 @@ def mean_kernel_inception_distance() :
 
 # inception_score()
 # frechet_inception_distance()
-kernel_inception_distance()
-# mean_kernel_inception_distance()
+# kernel_inception_distance()
+mean_kernel_inception_distance()
